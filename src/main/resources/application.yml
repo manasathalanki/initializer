@@ -1,0 +1,241 @@
+server:
+  port: 9091
+
+package:
+  name: com.wissen.application
+
+initializr:
+  dependencies:
+    - name: Wissen Utility
+      content:
+        - name: randomvaluegenerator
+          id: random-value-generator
+          groupId: com.wissen.utility
+          artifactId: random-value-generator
+          version: 1.0
+          description: Generating Random value
+        - name: hashvaluegenerator
+          id: hash-value-generator
+          groupId: com.wissen.utility
+          artifactId: hash-value-generator
+          version: 0.0.1
+          description: Generating hash value based on input
+        - name: uniqueidgenerator
+          id: unique-id-generator
+          groupId: com.wissen.utility
+          artifactId: unique-id-generator
+          version: 0.0.1
+          description: Generating unique id
+        - name: imageservice
+          id: image-service
+          groupId: com.wissen.utility
+          artifactId: image-service
+          version: 1.0
+          description: image services
+        - name: shorturl
+          id: shorturl
+          groupId: com.wissen.utility
+          artifactId: shorturl
+          version: 1.1
+          description: shorturl utility
+        - name: validator
+          id: validator
+          groupId: com.wissen.utility
+          artifactId: validator
+          version: 0.0.1
+          description: Validator utility
+        - name: datamask
+          id: datamask
+          groupId: com.wissen.utility
+          artifactId: datamask
+          version: 0.0.1
+          description: datamask utility
+    - name: Wissen Starters
+      content:
+        - name: wissen-swagger-starter
+          id: wissen-swagger-starter
+          groupId: com.wissen
+          artifactId: wissen-swagger-starter
+          version: 0.1
+          description: Wissen Swagger Starter
+        - name: wissen-errorhandling-starter
+          id: wissen-errorhandling-starter
+          groupId: com.wissen.errorhandling
+          artifactId: wissen-errorhandling-starter
+          version: 1.0.0
+          description: Spring Boot starter that configures error handling
+    - name: Web
+      content:
+      - name: Spring Web
+        id: web
+        groupId: org.springframework.boot
+        artifactId: spring-boot-starter-web
+        description: Build web, including RESTful, applications using Spring MVC. Uses Apache Tomcat as the default embedded container
+      - name: Spring WebFlux
+        id: webflux
+        groupId: org.springframework.boot
+        artifactId: spring-boot-starter-webflux
+        description: Build reactive web applications with Spring WebFlux and Netty
+    - name: Core
+      content:
+      - name: Spring Boot DevTools
+        id: devtools
+        groupId: org.springframework.boot
+        artifactId: spring-boot-devtools
+        description: Provides fast application restarts, LiveReload, and configurations for enhanced development experience
+      - name: Spring Configuration Processor
+        id: configuration-processor
+        groupId: org.springframework.boot
+        artifactId: spring-boot-configuration-processor
+        description: Generates metadata for your configuration properties
+    - name: Data
+      content:
+      - name: Spring Data JPA
+        id: data-jpa
+        groupId: org.springframework.boot
+        artifactId: spring-boot-starter-data-jpa
+        description: Persist data in SQL stores with Java Persistence API using Spring Data and Hibernate
+      - name: Spring Data MongoDB
+        id: data-mongodb
+        groupId: org.springframework.boot
+        artifactId: spring-boot-starter-data-mongodb
+        description: Provides integration with the MongoDB document database
+    - name: Security
+      content:
+      - name: Spring Security
+        id: security
+        groupId: org.springframework.boot
+        artifactId: spring-boot-starter-security
+        description: Provides authentication, authorization, and other security features for Spring applications
+    - name: SQL
+      content:
+      - name: Spring JDBC
+        id: jdbc
+        groupId: org.springframework.boot
+        artifactId: spring-boot-starter-jdbc
+        description: JDBC support with a Tomcat database connection pool
+  
+    - name: NoSQL
+      content:
+      - name: Spring Data Redis
+        id: data-redis
+        groupId: org.springframework.boot
+        artifactId: spring-boot-starter-data-redis
+        description: Redis key-value data store
+     
+    - name: Messaging
+      content:
+      - name: Spring Kafka
+        id: kafka
+        groupId: org.springframework.boot
+        artifactId: spring-boot-starter-kafka
+        description: Kafka messaging
+      - name: Spring AMQP
+        id: amqp
+        groupId: org.springframework.boot
+        artifactId: spring-boot-starter-amqp
+        description: AMQP messaging using RabbitMQ
+    - name: Cloud
+      content:
+      - name: Spring Cloud Starter
+        id: cloud-starter
+        groupId: org.springframework.cloud
+        artifactId: spring-cloud-starter
+        description: Spring Cloud starter for building distributed systems and microservices
+    - name: Testing
+      content:
+      - name: Spring Boot Starter Test
+        id: test
+        groupId: org.springframework.boot
+        artifactId: spring-boot-starter-test
+        description: Starter for testing Spring Boot applications with libraries including JUnit, Hamcrest, and Mockito
+    - name: Actuator
+      content:
+      - name: Spring Boot Actuator
+        id: actuator
+        groupId: org.springframework.boot
+        artifactId: spring-boot-starter-actuator
+        description: Adds production-ready features to help you monitor and manage your application
+    - name: Mail
+      content:
+      - name: Spring Boot Starter Mail
+        id: mail
+        groupId: org.springframework.boot
+        artifactId: spring-boot-starter-mail
+        description: Support for sending mail via JavaMail
+    - name: Thymeleaf
+      content:
+      - name: Spring Boot Starter Thymeleaf
+        id: thymeleaf
+        groupId: org.springframework.boot
+        artifactId: spring-boot-starter-thymeleaf
+        description: Support for serving a web application with Thymeleaf templates
+    - name: Quartz
+      content:
+      - name: Spring Boot Starter Quartz
+        id: quartz
+        groupId: org.springframework.boot
+        artifactId: spring-boot-starter-quartz
+        description: Support for Quartz scheduler
+    - name: OAuth2
+      content:
+      - name: Spring Boot Starter OAuth2 Client
+        id: oauth2-client
+        groupId: org.springframework.boot
+        artifactId: spring-boot-starter-oauth2-client
+        description: Support for OAuth2 Client
+      - name: Spring Boot Starter OAuth2 Resource Server
+        id: oauth2-resource-server
+        groupId: org.springframework.boot
+        artifactId: spring-boot-starter-oauth2-resource-server
+        description: Support for OAuth2 Resource Server
+
+  javaVersions:
+    - id: 8
+    - id: 11
+      default: true
+    - id: 17
+
+  bootVersions:
+    - id: 2.7.5
+    - id: 3.0.13
+      default: true
+    - id: 3.2.5
+    - id: 3.0.0
+
+  languages:
+    - name: Java
+      id: java
+      default: true
+
+  packagings:
+    - name: Jar
+      id: jar
+      default: true
+    - name: War
+      id: war
+      default: false
+
+  types:
+    - name: Maven Project
+      id: maven-project
+      description: Generate a Maven based project archive
+      tags:
+        build: maven
+        format: project
+      default: true
+      action: /starter.zip
+
+spring:
+  main:
+    allow-bean-definition-overriding: true
+
+filePath: C:/Users/006299/OneDrive - wisseninfotech.com/Accelerators-2024/reference-application-v3.0.13/src/main/java/com/wissen/referenceapplication
+
+custom:
+  classFilePaths:
+    ResponseStatusCodes: ${filePath}/response/ResponseStatusCodes.java
+    ResponseFormat: ${filePath}/response/ResponseFormat.java
+    ResponseEntityBuilder: ${filePath}/response/ResponseEntityBuilder.java
+    BaseService: ${filePath}/service/BaseService.java
+    BaseRepository: ${filePath}/repository/BaseRepository.java
